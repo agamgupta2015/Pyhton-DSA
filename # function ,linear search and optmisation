@@ -1,0 +1,65 @@
+# function ,linear search and optmisation
+
+n = int(input())
+
+
+#def <fn_name>( [ <arg1>, <arg2>, ... ] ) :
+    # statements
+
+def prime( num ) :
+    i = 2
+    while i < num :
+        if num%i == 0 :
+            return False
+        i += 1
+    else :
+        return True
+
+x = 2
+while x<=n :
+    if prime(x) :
+        print(x, end=", ")
+    x += 1
+
+--------------
+# linear 
+
+n = int(input())
+
+#def <fn_name>( [ <arg1>, <arg2>, ... ] ) :
+    # statements
+
+l = []
+i = 0
+while i<n :
+    l.append(int(input()))
+    i += 1
+print(l)
+
+num = int(input())
+
+# print( num in l )
+
+i = 0
+while i<n :
+    if l[i] == num :
+        print("Number in List")
+        break
+    i += 1
+else :
+    print("Number NOT FOUND!")
+    
+# optimization    
+    
+def prime( num ) :
+    i = 2
+    print("sqrt of num : ",num**0.5)
+    while i <= num**0.5 :
+        print(i, (i <= num**0.5) )
+        if num%i == 0 :
+            return False
+        i += 1
+    else :
+        return True
+
+print("Prime" if prime( int(input()) ) else "NOT PRIME" )
