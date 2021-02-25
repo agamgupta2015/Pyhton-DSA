@@ -1,0 +1,64 @@
+
+Intro to python
+
+# SYNTAF FOR IF_ELSE
+
+if <condition> :
+    # statements
+[elif <condition> :
+    # statements
+ ...
+ ]
+[else :
+    # statements]
+
+
+
+# while LOOP
+
+while <condition> :
+    # statements
+[else:
+     #statements]
+
+
+# For LOOP
+
+for <iterator> in <collection> :
+    # statements
+[else:
+    # statements]
+    
+    
+# creating a prime number 
+    n = int(input())
+
+x = 2
+while x<=n :
+    i = 2
+    while i < x :
+        if x%i == 0 :
+            break
+        i += 1
+    else :
+        print(x)
+    x += 1
+
+
+# Binary Search
+def binarySearch( l, num ) :
+    lo = 0
+    hi = len(l)-1
+
+    while lo <= hi :
+        mid = (lo+hi)//2
+        if l[mid]==num :
+            return mid
+        elif l[mid] > num :
+            hi = mid-1
+        else :
+            lo = mid+1
+    else :
+        return -1
+
+print(binarySearch( [6,2,3,4,5,1], 6 ))
